@@ -7,13 +7,13 @@ Using client classes makes it easier and more convenient to integrate the API in
 Please refer to our [Route Optimization API](https://developer.myptv.com/en/documentation/route-optimization-api/quick-start-route-optimization-api) documentation. 
 
 Language depending information:
-* DotNet: Please add the following nuget packages to your client project
+* **DotNet:** Please add the following nuget packages to your client project
   * JsonSubTypes (1.8.0)
   * Polly (7.2.3)
   * RestSharp (106.13.0)
   * System.ComponentModel.Annotations (5.0.0)
 
-* Java: Please add the following dependencies to your project
+* **Java:** Please add the following dependencies to your project
 ```     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -52,7 +52,7 @@ Language depending information:
         </dependency>
 ```       
 
-* TypeScript: Please add the following dependecies to your project
+* **TypeScript:** Please add the following dependecies to your project
   * aurelia-api (3.2.1)
   * aurelia-fetch-client (1.8.2)
   * node-fetch (2.6.1)
