@@ -45,6 +45,11 @@ Language depending information:
             <artifactId>openapi-generator-cli</artifactId>
             <version>6.2.1</version>
         </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.1.1</version>
+        </dependency>
 ```       
 
 * TypeScript: Please add the following dependecies to your project
