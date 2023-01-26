@@ -2,9 +2,9 @@
 Clients for the Route Optimization API (Version 1.7.1)
 
 Text
-Using client classes makes it easier and more convenient to integrate the API into an existing programming environment. We provide here clients for Java, C# and TypeScript. Alternatively you can generate the clients yourself by using this [tutorial](https://developer.dev.myptv.com/Tutorials/General/clientGeneration.htm).
+Using client classes makes it easier and more convenient to integrate the API into an existing programming environment. We provide here clients for Java, C# and TypeScript. Alternatively you can generate the clients yourself by using this [tutorial](https://developer.myptv.com/en/resources/tutorials/general/how-generate-clients-ptv-developer-apis).
 
-Please refer to our [Route Optimization API](https://developer.dev.myptv.com/Documentation/Route%20Optimization%20API/QuickStart.htm) documentation. 
+Please refer to our [Route Optimization API](https://developer.myptv.com/en/documentation/route-optimization-api/quick-start-route-optimization-api) documentation. 
 
 Language depending information:
 * DotNet: Please add the following nuget packages to your client project
@@ -14,8 +14,40 @@ Language depending information:
   * System.ComponentModel.Annotations (5.0.0)
 
 * Java: Please add the following dependencies to your project
+```     <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.10.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.10.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.10.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>2.10.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openapitools</groupId>
+            <artifactId>jackson-databind-nullable</artifactId>
+            <version>0.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.ptv-logistics</groupId>
+            <artifactId>openapi-generator-cli</artifactId>
+            <version>6.2.1</version>
+        </dependency>
+```       
 
-* TypeScript: Please add the following nuget packages to your client project
+* TypeScript: Please add the following dependecies to your project
   * aurelia-api (3.2.1)
   * aurelia-fetch-client (1.8.2)
   * node-fetch (2.6.1)
