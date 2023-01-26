@@ -1,10 +1,7 @@
-# clients-route-optimization-api
-Clients for the Route Optimization API (Version 1.7.1)
+# Clients for the Route Optimization API (Version 1.7.1)
 
-Text
 Using client classes makes it easier and more convenient to integrate the API into an existing programming environment. We provide here clients for Java, C# and TypeScript. Alternatively you can generate the clients yourself by using this [tutorial](https://developer.myptv.com/en/resources/tutorials/general/how-generate-clients-ptv-developer-apis).
 
-Please refer to our [Route Optimization API](https://developer.myptv.com/en/documentation/route-optimization-api/quick-start-route-optimization-api) documentation. 
 
 Language depending information:
 * **DotNet:** Please add the following nuget packages to your client project
@@ -51,6 +48,12 @@ Language depending information:
             <version>2.1.1</version>
         </dependency>
 ```       
+   * to initialize your client and set your APIKey you can use the following snippet
+ ```
+ var apiClient = Configuration.getDefaultApiClient()
+                .setRequestInterceptor(builder -> builder.setHeader("ApiKey", API_KEY));
+ ```
+
 
 * **TypeScript:** Please add the following dependecies to your project
   * aurelia-api (3.2.1)
@@ -59,4 +62,9 @@ Language depending information:
   * polly-js (1.8.0)
   * typescript (4.1.2)
   * typescript-http-client (0.10.1)
+  
+
+ &nbsp;  
+ &nbsp;  
+ Please refer to our [Route Optimization API](https://developer.myptv.com/en/documentation/route-optimization-api/quick-start-route-optimization-api) documentation. 
   
