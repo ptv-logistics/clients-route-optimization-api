@@ -5,6 +5,7 @@ Using client classes makes it easier and more convenient to integrate the API in
 
 Language depending information:
 * **DotNet:** Please add the following nuget packages to your client project
+  * Please use .NET 6.0
   * JsonSubTypes (1.8.0)
   * Polly (7.2.3)
   * RestSharp (106.13.0)
@@ -57,7 +58,7 @@ Language depending information:
   ```       
     To initialize your client with your APIKey you can use the following snippet:
    ```
-   var apiClient = Configuration.getDefaultApiClient()
+   ApiClient apiClient = Configuration.getDefaultApiClient()
        .setRequestInterceptor(builder -> builder.setHeader("ApiKey", "Enter your ApiKey here"));
    ```
 
