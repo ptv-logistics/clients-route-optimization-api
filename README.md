@@ -57,8 +57,8 @@ Language depending information:
   ```       
     To initialize your client with your APIKey you can use the following snippet:
    ```
-     var apiClient = Configuration.getDefaultApiClient()
-                .setRequestInterceptor(builder -> builder.setHeader("ApiKey", "Enter your ApiKey here"));
+   var apiClient = Configuration.getDefaultApiClient()
+       .setRequestInterceptor(builder -> builder.setHeader("ApiKey", "Enter your ApiKey here"));
    ```
 
 
