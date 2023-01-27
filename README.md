@@ -14,7 +14,7 @@ Language depending information:
     ```
      var apiKey = new Dictionary<string, string>(){["apiKey"] = "Enter your ApiKey here" };
      var configuration = new Configuration() { ApiKey = apiKey };
-     RoutingApi routingApi = new RoutingApi(configuration);
+     PlansApi plansApi = new PlansApi(configuration);
     ```
 
 * **Java:** Please add the following dependencies to your project
@@ -73,9 +73,10 @@ Language depending information:
   
   To initialize your client with your APIKey you can use the following snippet:
     ```
-    let configurationParameters: ConfigurationParameters = {headers: {ApiKey: "Enter your ApiKey here"}};
+    let configurationParameters: ConfigurationParameters = {fetchApi: require('node-fetch');,
+                                                            headers: {ApiKey: "Enter your ApiKey here"}};
     let configuration: Configuration = new Configuration(configurationParameters);
-    let routingApi: RoutingApi = new RoutingApi(configuration);
+    let plansApi: PlansApi = new PlansApi(configuration);
     ```
 
  &nbsp;  
