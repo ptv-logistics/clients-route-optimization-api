@@ -6,7 +6,6 @@ export * from './CausingError';
 export * from './CustomerLocationAttributes';
 export * from './DailyRestPosition';
 export * from './DailyRestRule';
-export * from './DepotLocationAttributes';
 export * from './Driver';
 export * from './ErrorResponse';
 export * from './Event';
