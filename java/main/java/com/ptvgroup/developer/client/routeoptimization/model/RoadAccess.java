@@ -24,80 +24,83 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import java.time.OffsetDateTime;
 import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 import com.ptvgroup.developer.client.routeoptimization.ApiClient;
 /**
- * A time interval specified by two points in time - the beginning and the end of the interval.
+ * Use these coordinates for matching to the nearest road. Implies **includeLastMeters**, i.e. the air-line connection between the location coordinates and the matched coordinates is included in the relation distance and travel time. This is useful if the location should not be matched to the nearest possible road but to some road further away, e.g. garage exit at a different road.
  */
 @JsonPropertyOrder({
-  TimeInterval.JSON_PROPERTY_START,
-  TimeInterval.JSON_PROPERTY_END
+  RoadAccess.JSON_PROPERTY_LATITUDE,
+  RoadAccess.JSON_PROPERTY_LONGITUDE
 })
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-27T08:50:35.495306091Z[Etc/UTC]", comments = "Generator version: 7.9.0")
-public class TimeInterval {
-  public static final String JSON_PROPERTY_START = "start";
-  private OffsetDateTime start;
+public class RoadAccess {
+  public static final String JSON_PROPERTY_LATITUDE = "latitude";
+  private Double latitude;
 
-  public static final String JSON_PROPERTY_END = "end";
-  private OffsetDateTime end;
+  public static final String JSON_PROPERTY_LONGITUDE = "longitude";
+  private Double longitude;
 
-  public TimeInterval() { 
+  public RoadAccess() { 
   }
 
-  public TimeInterval start(OffsetDateTime start) {
-    this.start = start;
+  public RoadAccess latitude(Double latitude) {
+    this.latitude = latitude;
     return this;
   }
 
   /**
-   * The beginning of the time interval formatted according to [RFC 3339](https://tools.ietf.org/html/rfc3339). The date must not be before 1970-01-01T00:00:00+00:00 nor after 2037-12-31T23:59:59+00:00. The date must provide an offset to UTC.
-   * @return start
+   * The latitude value in degrees (WGS84/EPSG:4326) from south to north.
+   * minimum: -90
+   * maximum: 90
+   * @return latitude
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_START)
+  @JsonProperty(JSON_PROPERTY_LATITUDE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public OffsetDateTime getStart() {
-    return start;
+  public Double getLatitude() {
+    return latitude;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START)
+  @JsonProperty(JSON_PROPERTY_LATITUDE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setStart(OffsetDateTime start) {
-    this.start = start;
+  public void setLatitude(Double latitude) {
+    this.latitude = latitude;
   }
 
 
-  public TimeInterval end(OffsetDateTime end) {
-    this.end = end;
+  public RoadAccess longitude(Double longitude) {
+    this.longitude = longitude;
     return this;
   }
 
   /**
-   * The end of the time interval formatted according to [RFC 3339](https://tools.ietf.org/html/rfc3339). The date must not be before 1970-01-01T00:00:00+00:00 nor after 2037-12-31T23:59:59+00:00. The date must provide an offset to UTC.
-   * @return end
+   * The longitude value in degrees (WGS84/EPSG:4326) from west to east.
+   * minimum: -180
+   * maximum: 180
+   * @return longitude
    */
   @javax.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_END)
+  @JsonProperty(JSON_PROPERTY_LONGITUDE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public OffsetDateTime getEnd() {
-    return end;
+  public Double getLongitude() {
+    return longitude;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END)
+  @JsonProperty(JSON_PROPERTY_LONGITUDE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setEnd(OffsetDateTime end) {
-    this.end = end;
+  public void setLongitude(Double longitude) {
+    this.longitude = longitude;
   }
 
 
   /**
-   * Return true if this TimeInterval object is equal to o.
+   * Return true if this RoadAccess object is equal to o.
    */
   @Override
   public boolean equals(Object o) {
@@ -107,22 +110,22 @@ public class TimeInterval {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TimeInterval timeInterval = (TimeInterval) o;
-    return Objects.equals(this.start, timeInterval.start) &&
-        Objects.equals(this.end, timeInterval.end);
+    RoadAccess roadAccess = (RoadAccess) o;
+    return Objects.equals(this.latitude, roadAccess.latitude) &&
+        Objects.equals(this.longitude, roadAccess.longitude);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(start, end);
+    return Objects.hash(latitude, longitude);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TimeInterval {\n");
-    sb.append("    start: ").append(toIndentedString(start)).append("\n");
-    sb.append("    end: ").append(toIndentedString(end)).append("\n");
+    sb.append("class RoadAccess {\n");
+    sb.append("    latitude: ").append(toIndentedString(latitude)).append("\n");
+    sb.append("    longitude: ").append(toIndentedString(longitude)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -170,14 +173,14 @@ public class TimeInterval {
 
     StringJoiner joiner = new StringJoiner("&");
 
-    // add `start` to the URL query string
-    if (getStart() != null) {
-      joiner.add(String.format("%sstart%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getStart()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+    // add `latitude` to the URL query string
+    if (getLatitude() != null) {
+      joiner.add(String.format("%slatitude%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getLatitude()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
     }
 
-    // add `end` to the URL query string
-    if (getEnd() != null) {
-      joiner.add(String.format("%send%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getEnd()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
+    // add `longitude` to the URL query string
+    if (getLongitude() != null) {
+      joiner.add(String.format("%slongitude%s=%s", prefix, suffix, URLEncoder.encode(ApiClient.valueToString(getLongitude()), StandardCharsets.UTF_8).replaceAll("\\+", "%20")));
     }
 
     return joiner.toString();
